@@ -13,4 +13,18 @@ public static class ConfigurationReader
         configurationRoot.GetSection(nameof(AppSettings)).Bind(appSettings);
         return appSettings;
     }
+
+    public static ApiSettings GetApiSettings()
+    {
+        ApiSettings apiSettings = new();
+        configurationRoot.GetSection(nameof(ApiSettings)).Bind(apiSettings);
+        return apiSettings;
+    }
+
+    public static UiTestsUrls GetUiTestsUrls()
+    {
+        UiTestsUrls uiTestsUrls = new();
+        configurationRoot.GetSection(nameof(UiTestsUrls)).Bind(uiTestsUrls);
+        return uiTestsUrls;
+    }
 }

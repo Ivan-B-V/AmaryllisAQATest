@@ -17,5 +17,6 @@ public class WebDriver
     public static void CloseDriver()
     {
         driverThreadLocal.Value?.Quit();
+        driverThreadLocal.Value = null;
     }
 }

@@ -1,10 +1,8 @@
-﻿
-namespace Core.Enums
+﻿namespace Core.Enums;
+
+public enum BrowserTypes
 {
-    public enum BrowserTypes
-    {
-        Chrome,
-        Firefox,
-        Edge
-    }
+    Chrome,
+    Firefox,
+    Edge
 }
